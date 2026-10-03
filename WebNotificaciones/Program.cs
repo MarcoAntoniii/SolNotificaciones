@@ -1,7 +1,12 @@
+using Business;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<B_Notificacion>();
+builder.Services.AddScoped<NotificacionFactory>();
 
 var app = builder.Build();
 
